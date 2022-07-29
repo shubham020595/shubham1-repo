@@ -9,4 +9,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@main
+      - name: Create pull request 
+        uses: shubham020595/shubham1-repo@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "Running!"
