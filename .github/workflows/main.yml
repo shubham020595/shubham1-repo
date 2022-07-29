@@ -22,13 +22,13 @@ jobs:
       run: |
         npm run build
         mkdir Build
-        cd build
+        mv build/.next
     - name: Deploy to gh-pages
-       run: |
-        mkdir Build
-        cd build
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN  }}
         publish_dir: ./build
         keep_files: true  
+    - name: Build dir
+      run: |
+        mkdir Build
