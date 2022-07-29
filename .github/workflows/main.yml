@@ -22,7 +22,7 @@ jobs:
       run: |
         npm run build
         mkdir BUILD
-        mv .next BUILD/.next
+        mv BUILD
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
