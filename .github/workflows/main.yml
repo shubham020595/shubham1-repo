@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@master
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -20,15 +20,15 @@ jobs:
       run: npm install
     - name: Build page
       run: npm run build
-    # - name: Deploy to gh-pages
-    #   uses: peaceiris/actions-gh-pages@v3
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN  }}
-    #     publish_dir: ./build
-    #     keep_files: true  
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        server: ftp://43.225.55.44
-        username: demoaccount
-        password: ${{ secrets.prod_FTP_PASSWORD }}
+        github_token: ${{ secrets.GITHUB_TOKEN  }}
+        publish_dir: ./build
+        keep_files: true  
+    # - name: Sync files
+    #   uses: SamKirkland/FTP-Deploy-Action@4.3.0
+    #   with:
+    #     server: ftp://43.225.55.44
+    #     username: demoaccount
+    #     password: ${{ secrets.prod_FTP_PASSWORD }}
