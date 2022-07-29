@@ -1,0 +1,16 @@
+name: Run the Action on each commit
+on:
+  push:
+    branches:
+      - master
+jobs: 
+  action-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Create pull request 
+        uses: shubham020595/shubham1-repo@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo "Running!"
