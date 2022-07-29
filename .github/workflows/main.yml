@@ -22,7 +22,7 @@ jobs:
       run: |
         npm run build
     - name: Deploy to gh-pages
-      uses: shubham020595/actions-shubham1-repo@master
+      uses: shubham020595/shubham1-repo@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN  }}
         publish_dir: ./build
