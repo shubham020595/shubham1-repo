@@ -10,9 +10,9 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@master
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -21,8 +21,8 @@ jobs:
     - name: Build page
       run: npm run build
     - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN  }}
-        publish_dir: ./built
+        publish_dir: ./public
         keep_files: true  
