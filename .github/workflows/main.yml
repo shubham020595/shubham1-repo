@@ -24,6 +24,9 @@ jobs:
         mkdir Build
         cd build
     - name: Deploy to gh-pages
+       run: |
+        mkdir Build
+        cd build
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN  }}
