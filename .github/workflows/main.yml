@@ -19,16 +19,10 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Build page
-      run: |
-        npm run build
-        mkdir Build
-        mv build/.next
+      run: npm run build
     - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-deploy-build@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN  }}
         publish_dir: ./build
         keep_files: true  
-    - name: Build dir
-      run: |
-        mkdir Build
