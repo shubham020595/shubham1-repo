@@ -10,9 +10,9 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-    - uses: actions/checkout@gh-pages
+    - uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@gh-pages
+      uses: actions/setup-node@master
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -29,7 +29,7 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: test.rebex.net
+        server:  sftp://test.rebex.net
         username: demo
         password: ${{ secrets.prod_FTP_PASSWORD }}
         # protocol: ftps
