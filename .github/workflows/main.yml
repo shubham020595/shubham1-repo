@@ -29,6 +29,8 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ftp://127.0.0.1
-        username: shubham
+        server: ftp://test.rebex.net
+        username: demo
         password: ${{ secrets.prod_FTP_PASSWORD }}
+        # protocol: ftps
+        # port: 22 
