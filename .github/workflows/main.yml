@@ -10,9 +10,9 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@gh-pages
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@master
+      uses: actions/setup-node@gh-pages
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
