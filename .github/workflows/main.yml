@@ -26,7 +26,7 @@ jobs:
     #     github_token: ${{ secrets.GITHUB_TOKEN  }}
     #     publish_dir: ./build
     #     keep_files: true 
-    - name: Sync files
+    - name: Sync new files 
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server:  ftp.themesbrand.website
