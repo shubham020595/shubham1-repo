@@ -35,5 +35,14 @@ jobs:
         server:  ftp.themesbrand.website
         username: themesbrand
         password: ${{ secrets.prod_FTP_PASSWORD }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          public
+          src
+          package-lock.json
+          package.json
+          README.md
         # protocol: ftps
         # port: 22  
