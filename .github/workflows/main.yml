@@ -41,8 +41,8 @@ jobs:
           **/node_modules/**
           public
           src
-          package-lock.json
-          package.json
-          README.md
+        # package-lock.json
+        # package.json
+        # README.md
         # protocol: ftps
         # port: 22  
