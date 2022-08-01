@@ -39,8 +39,8 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
-          public
-          src
+        # public
+        # src
         # package-lock.json
         # package.json
         # README.md
