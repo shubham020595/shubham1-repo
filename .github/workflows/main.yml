@@ -33,4 +33,4 @@ jobs:
         username: themesbrand
         password: ${{ secrets.prod_FTP_PASSWORD }}
         # protocol: ftps
-        # port: 22 
+        # port: 22  
