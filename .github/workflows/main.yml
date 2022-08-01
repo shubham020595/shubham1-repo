@@ -18,7 +18,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install Packages
-      working-directory: /public
+      working-directory: ./public
       run: npm install
     - name: Build page
       run: npm run build
