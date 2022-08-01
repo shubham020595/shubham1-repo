@@ -30,6 +30,7 @@ jobs:
     #     keep_files: true 
     - name: Sync new files 
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      working-directory: ./public
       with:
         server:  ftp.themesbrand.website
         username: themesbrand
