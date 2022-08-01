@@ -11,12 +11,14 @@ jobs:
         node-version: [14.x]
     steps:
     - uses: actions/checkout@master
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@master
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install Packages
+      working-directory: ./public
       run: npm install
     - name: Build page
       run: npm run build
